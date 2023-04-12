@@ -1,0 +1,1 @@
+komunikat "new connection" został wydrukowany za pomocą za pomoocą event listenera i zapytania http
