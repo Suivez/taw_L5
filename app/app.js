@@ -13,6 +13,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json({limit: '2048kb'}));
 
+app.use(express.static('public'));
+
 app.use(cors());
 
 try {
@@ -28,6 +30,7 @@ process.on('SIGINT', () => {
     console.error('Mongoose default connection disconnected through app termination');
     process.exit(0);
 });
+
 
 routes(app);
 
